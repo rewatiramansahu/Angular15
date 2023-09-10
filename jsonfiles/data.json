@@ -1,0 +1,113 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "RESTful APIs",
+      "description": "desc of post 211",
+      "author": "user12311"
+    },
+    {
+      "id": 3,
+      "title": "Frontend Frameworks",
+      "description": "desc of post 3",
+      "author": "dev_guru"
+    },
+    {
+      "id": 4,
+      "title": "Database Management",
+      "description": "desc of post 4",
+      "author": "data_ninja"
+    },
+    {
+      "id": 5,
+      "title": "JavaScript Basics",
+      "description": "desc of post 5",
+      "author": "coder101"
+    },
+    {
+      "id": 6,
+      "title": "CSS Styling Tricks",
+      "description": "desc of post 6",
+      "author": "designer123"
+    },
+    {
+      "id": 7,
+      "title": "Python Programming",
+      "description": "desc of post 7",
+      "author": "pythonista"
+    },
+    {
+      "id": 8,
+      "title": "Machine Learning Algorithms",
+      "description": "desc of post 8",
+      "author": "ml_expert"
+    },
+    {
+      "id": 9,
+      "title": "Web Development Best Practices",
+      "description": "desc of post 9",
+      "author": "webdev_pro"
+    },
+    {
+      "id": 10,
+      "title": "Data Visualization Techniques",
+      "description": "desc of post 10",
+      "author": "viz_artist"
+    }
+  ],
+  "comments": [
+    {
+      "id": 3,
+      "body": "Comment 1 on post 2",
+      "postId": 2
+    },
+    {
+      "id": 4,
+      "body": "Comment 1 on post 3",
+      "postId": 3
+    },
+    {
+      "id": 5,
+      "body": "Comment 1 on post 4",
+      "postId": 4
+    },
+    {
+      "id": 6,
+      "body": "Comment 1 on post 5",
+      "postId": 5
+    },
+    {
+      "id": 7,
+      "body": "Comment 1 on post 6",
+      "postId": 6
+    },
+    {
+      "id": 8,
+      "body": "Comment 1 on post 7",
+      "postId": 7
+    },
+    {
+      "id": 9,
+      "body": "Comment 1 on post 8",
+      "postId": 8
+    },
+    {
+      "id": 10,
+      "body": "Comment 1 on post 9",
+      "postId": 9
+    },
+    {
+      "id": 11,
+      "body": "Comment 1 on post 4 new",
+      "postId": 4
+    },
+    {
+      "id": 12,
+      "body": "Comment 1 on post 4 new new",
+      "postId": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

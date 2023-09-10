@@ -1,0 +1,18 @@
+<p>impure-pipes-practices works! 111</p>
+
+ Name : <input type="text" [(ngModel)]="name">
+Category : <input type="text" [(ngModel)]="cat">
+<button  (click)="addNew()" > Add </button>
+<hr>
+
+<input type="text" [(ngModel)]="searchText" placeholder="Search">
+<ul>
+  <li *ngFor="let item of items | filter: searchText">
+    {{ item.name }} - {{item.category}}
+  </li>
+</ul>
+==============================================
+<input type="text"  #num >
+<button (click)="pushArr(num.value)">Push in Array</button>
+<p>  {{numbers}} </p>
+<h1> {{numbers | sorting}} </h1>

@@ -1,0 +1,33 @@
+<div>
+  <h3>ngClass Directive Example</h3>
+  <div [ngClass]="{'active': isActive, 'highlight': isHighlighted}">This element applies conditional classes.</div>
+</div>
+
+<div>
+  <h3>ngStyle Directive Example</h3>
+  <div [ngStyle]="{'color': textColor, 'font-size.px': fontSize}">This element applies dynamic styles.</div>
+</div>
+
+<div>
+  <h3>ngModel Directive Example</h3>
+  <input type="text" [(ngModel)]="name" placeholder="Enter your name">
+  <p>Your name is: {{ name }}</p>
+</div>
+
+<div>
+  <h3>ngDisabled Directive Example</h3>
+  <input type="text" [disabled]="isDisabled" placeholder="Disabled input">
+</div>
+
+<div>
+  <h3>ngReadOnly Directive Example</h3>
+  <input type="text" [readonly]="isReadOnly" placeholder="Read-only input">
+</div>
+
+<div>
+  <h3>ngValue Directive Example</h3>
+  <select [(ngModel)]="selectedOption">
+    <option *ngFor="let option of options" [ngValue]="option">{{ option }}</option>
+  </select>
+  <p>Selected option: {{ selectedOption }}</p>
+</div>

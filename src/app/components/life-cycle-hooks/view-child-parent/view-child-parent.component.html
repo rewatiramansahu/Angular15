@@ -1,0 +1,30 @@
+
+
+<div class="container parentclass m-2">
+  <p>view-child-parent works!</p>
+
+  <div>
+      <span *ngFor=" let e of array" class="m-1"> {{e}}   </span>
+  </div>
+  <button (click)="updateArray()">Update Array</button>
+ 
+  <div class="row">
+
+    <div class="col-md-6">
+        <div class="container child1css">
+         <app-view-child1 #child1ref  [arrayData]="array"></app-view-child1>
+        </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class="container child2css">
+        <app-view-child2 ></app-view-child2>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+

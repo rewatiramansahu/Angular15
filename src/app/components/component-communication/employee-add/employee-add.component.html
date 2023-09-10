@@ -1,0 +1,37 @@
+
+<div class="row">
+  <div class="col-md-7 ">
+    <p>employee-add works!</p>
+  </div>
+  <div class="col-md-5 ">
+    Add-New:<button type="button" class="btn btn-primary-sm m-1 "   (click)="forAddButton()" >
+      <i class="bi bi-person-fill-add"></i>
+    </button>
+  </div>
+</div>
+<hr>
+<div>
+  <div class="mb-3">
+    <label for="empid" class="form-label">Employee ID</label>
+    <input type="number" class="form-control" id="empid" placeholder="Enter employee id "  [(ngModel)]="empid" value="{{selectedEmployee?.empid}}"   >
+  </div>
+
+  <div class="mb-3">
+    <label for="empid" class="form-label">Employee Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter employee name "   [(ngModel)]="name" value="{{selectedEmployee?.name}}"  >
+  </div>
+
+  <div class="mb-3">
+    <label for="empid" class="form-label">Employee Salary</label>
+    <input type="number" class="form-control" id="salary" placeholder="Enter employee salary "  [(ngModel)]="salary" value="{{selectedEmployee?.salary}}" >
+  </div>
+
+  <div class="mb-3">
+    <label for="empid" class="form-label">Employee Designation</label>
+    <input type="text" class="form-control" id="designation"   [(ngModel)]="designation"  value="{{selectedEmployee?.designation}}"  placeholder="Enter Emp ID " >
+  </div>
+
+  <button type="button" class="btn btn-info"  (click)="addEmployee();" *ngIf="isNew">Save </button>
+  <button type="button" class="btn btn-info"  (click)="updateEmployee();" *ngIf="!isNew" >Update </button>
+
+</div>

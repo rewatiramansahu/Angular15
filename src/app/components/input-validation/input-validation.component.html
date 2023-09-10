@@ -1,0 +1,15 @@
+<p>input-validation works!</p>
+<div>
+  <label for="username">Username:</label>
+  <input id="username" type="text" [formControl]="username" appInputValidation>
+
+  <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error-message">
+    <div *ngIf="username.errors?.['required']">Username is required.</div>
+    <div *ngIf="username.errors?.['minlength']">Username must be at least 5 characters long.</div>
+    <div *ngIf="username.errors?.['pattern']">Username must contain only alphanumeric characters.</div>
+  </div>
+</div>
+
+
+
+

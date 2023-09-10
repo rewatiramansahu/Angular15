@@ -1,0 +1,38 @@
+<h2>Posts</h2>
+<div class="row">
+  <div class="col-md-9">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts">
+            <td>{{ post.id }}</td>
+            <td>{{ post.id }}</td>
+            <td>
+              <button (click)="editPost(post)">Edit</button>
+              <button (click)="deletePost(post.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+   <div class="col-md-3">
+      <h2>Add New Post</h2>
+
+      <form (submit)="addPost()">
+        <label>
+          Title:
+          <input type="text" [(ngModel)]="newPostTitle" name="newPostTitle" required>
+        </label>
+        <button type="submit">Add Post</button>
+      </form>
+
+   </div>
+</div>
+
+

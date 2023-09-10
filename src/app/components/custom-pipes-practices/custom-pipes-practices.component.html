@@ -1,0 +1,51 @@
+<p>custom-pipes-practices works!</p>
+
+<h5> Truncate custom Pipe :  </h5>
+<p> {{paragraph | truncate : 50}} </p>
+<hr>
+<h5> SortBy custom pipe of array of object by the property name  : </h5>
+<ul>
+  <li *ngFor="let item of items | sortBy:'age' ">{{ item.name }} - {{ item.age }}</li>
+</ul>
+<hr>
+
+<h5>Unique filter, custom pipe for array elements  by using the Set()</h5>
+<p>  {{array | uniqueFilter}} </p>
+<hr>
+<h5>Mask Accno Pipe, custom pipe for array elements  by using the Set()</h5>
+<p>  {{accno | maskAccno}} </p>
+
+<hr>
+
+<h5> calculateAge Pipe : custom pipe for age calculate. </h5>
+<p>My Age: {{ myBirthdate | calculateAge }}</p>
+
+<hr>
+<h5> highlight Pipe : custom pipe for array of keywords of string to make highlight. </h5>
+<p [innerHTML]="myText | highlight: myKeywords"></p>
+
+<hr>
+<h5> capitalize pipe : custome pipe for the capital of first character from each word of string.</h5>
+<p>Before :   {{str1 }} </p>
+<p> After :  {{str1 | capitalize}} </p>
+
+<hr>
+<h5> numberToWords pipe : pipe for convert number to words</h5>
+<p> In Numeric : {{8347601 }} </p>
+<p> In Words : {{8347601 | numberToWords }} </p>
+<hr>
+<h5> suffle pipe : for suffle the elements of array</h5>
+<p> {{array}} </p>
+<p> {{array | shuffle}} </p>
+<hr>
+
+<h5> groupBy pipe : in array of object we can group by  its property name of any object its very important features  </h5>
+<div *ngFor="let group of items1 | groupBy:'category'">
+  <h5>{{ group.category }}</h5>
+  <ul>
+    <li *ngFor="let item of group.items">{{ item.title }}</li>
+  </ul>
+</div>
+
+<hr>
+

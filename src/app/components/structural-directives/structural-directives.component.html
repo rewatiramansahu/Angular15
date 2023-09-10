@@ -1,0 +1,41 @@
+<!-- structural-directives.component.html -->
+<div>
+  <h3>ngIf Directive Example</h3>
+  <p *ngIf="showElement">This element is rendered conditionally.</p>
+</div>
+
+<div>
+  <h3>ngFor Directive Example</h3>
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</div>
+
+<div>
+  <h3>ngSwitch Directive Example</h3>
+  <div [ngSwitch]="value">
+    <div *ngSwitchCase="'A'">Case A</div>
+    <div *ngSwitchCase="'B'">Case B</div>
+    <div *ngSwitchDefault>Default Case</div>
+  </div>
+</div>
+
+<div>
+  <h3>ngTemplateOutlet Directive Example</h3>
+  <ng-template #customTemplate>
+    Custom Content
+    <h5>custome h5</h5>
+    <div>custom div</div>
+  </ng-template>
+  <div [ngTemplateOutlet]="customTemplate"></div>
+</div>
+
+<div>
+  <h3>ngContainer Directive Example</h3>
+  <ng-container *ngFor="let item of items">
+     <h5>
+      {{ item }}
+     </h5>
+
+  </ng-container>
+</div>

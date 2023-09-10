@@ -1,0 +1,30 @@
+<div>
+  <h3>ngSubmit Directive Example</h3>
+  <form (ngSubmit)="submitForm()">
+    ...
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div>
+  <h3>ngClick Directive Example</h3>
+  <button (click)="handleClick()">Click Me</button>
+</div>
+
+<div>
+  <h3>ngChange Directive Example</h3>
+  <input type="text" (change)="handleChange($event)">
+</div>
+
+<div>
+  <h3>ngKeyDown Directive Example</h3>
+  <input type="text" (keydown)="handleKeyDown($event)">
+</div>
+
+<div>
+  <h3>ngKeyUp Directive Example</h3>
+  <input type="text" (keyup)="handleKeyUp($event)">
+  <div>
+    <h3>ngKeyPress Directive Example</h3>
+    <input type="text" (keypress)="handleKeyPress($event)">
+  </div>

@@ -1,0 +1,20 @@
+<h2>Product List</h2>
+<button (click)="myAlert();" >Sweet Alert </button>
+<button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+<ng-template>
+  <button>{{ currentPage-2 }}</button>
+  <button>{{ currentPage-1 }}</button>
+</ng-template>
+<button>{{ currentPage }}</button>
+<ng-template>
+  <button>{{ currentPage+1}}</button>
+  <button>{{ currentPage+2}}</button>
+</ng-template>
+
+<button (click)="nextPage()"  [disabled]="currentPage === products.length" >Next</button>
+
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.title }} - {{ product.body }}
+  </li>
+</ul>

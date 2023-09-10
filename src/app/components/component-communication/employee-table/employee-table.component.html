@@ -1,0 +1,67 @@
+<p>employee-table works!</p>
+<hr>
+<input type="text"  [(ngModel)]="searchQ" placeholder="Search here ..."  style="float:right;">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th (click)="sortTable('empid')" [class.asc]="sortColumn === 'empid' && sortDirection === 'asc'" [class.desc]="sortColumn === 'empid' && sortDirection === 'desc'">Emp ID</th>
+      <th (click)="sortTable('name')" [class.asc]="sortColumn === 'name' && sortDirection === 'asc'" [class.desc]="sortColumn === 'name' && sortDirection === 'desc'">Name</th>
+      <th (click)="sortTable('salary')" [class.asc]="sortColumn === 'salary' && sortDirection === 'asc'" [class.desc]="sortColumn === 'salary' && sortDirection === 'desc'">Salary</th>
+      <th (click)="sortTable('designation')" [class.asc]="sortColumn === 'designation' && sortDirection === 'asc'" [class.desc]="sortColumn === 'designation' && sortDirection === 'desc'">Designation</th>
+
+      <!-- <th>EMP ID</th>
+      <th>Name</th>
+      <th>SALARY</th>
+      <th>DESIGNATION</th> -->
+      <th>ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees | nameFilter : searchQ">
+    <!-- <tr *ngFor="let employee of employees "> -->
+      <td>{{ employee.empid }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.salary | currency : 'INR' }}</td>
+      <td>{{ employee.designation }}</td>
+      <td>
+        <button type="button" class="btn btn-primary-sm m-1" data-bs-toggle="modal"  (click)="openEmployeeModal(employee)" data-bs-target="#exampleModal">
+          <i class="bi bi-eye-fill"></i>
+        </button>
+        <button type="button" class="btn btn-primary-sm m-1 " (click)="editEmployee(employee)"  >
+          <i class="bi bi-pencil-square"></i>
+      </button>
+        <button class="btn btn-danger-sm m-1" (click)="deleteEmployee(employee)">
+          <i class="bi bi-trash3-fill"></i>
+        </button>
+        <!-- <button class="btn btn-success" (click)="openEmployeeModal(employee)">View Employee</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<!-- View Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"   >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <p>ID: {{ selectedEmployee?.empid }}</p>
+        <p>Name: {{ selectedEmployee?.name }}</p>
+        <p>Salary: {{ selectedEmployee?.salary }}</p>
+        <p>Designation: {{ selectedEmployee?.designation }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

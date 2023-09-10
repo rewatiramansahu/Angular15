@@ -1,0 +1,14 @@
+<hr>
+<p [ngClass]="num%2==0?'myclass1':'myclass2'">directives-practice works!</p>
+<hr>
+<p [ngStyle]="num%2==0?{color:'red'}:{color:'blue'}">directives-practice works!</p>
+<hr>
+
+<select [(ngModel)]="selectedCity">
+  <option value="">Select a city</option>
+  <option *ngFor="let city of cities" [ngValue]="city">{{ city.name }}</option>
+</select>
+
+
+<p>Selected City  Name : {{selectedCity?.name}}</p>
+<p> Selected City Id:  {{selectedCity?.id}} </p>

@@ -1,0 +1,14 @@
+.strength-meter {
+  width: 200px;
+  height: 10px;
+  background-color: lightgray;
+  margin-top: 10px;
+}
+
+.strength-bar {
+  height: 100%;
+  background-color: green;
+}
+
+
+

@@ -1,0 +1,26 @@
+<p>product-api works!</p>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th> ID</th>
+        <th>Image</th>       
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let product of products ">
+        <td> {{product.id}} </td>
+        <td> <img src="{{product.image}}" style="height:100px;"> </td>
+       
+        <td> {{product.title}} </td>
+        <td> {{product.description}} </td>
+        <td> {{product.price}} </td>
+      </tr>
+        
+    </tbody>
+</table>
+

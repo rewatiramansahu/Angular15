@@ -1,0 +1,22 @@
+<div class="container parentclass m-2">
+  <p>employees-crud works!</p>
+  {{employees | json}}
+<hr>
+  <div class="row">
+
+    <div class="col-md-8">
+        <div class="container child1css">
+          <app-employee-table [employees]="employees"  (editEmployeeEvent)="OnEditEmployee($event)"  ></app-employee-table>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+      <div class="container child2css">
+        <app-employee-add [employees]="employees" [selectedEmployee]="selectedEmployee"  [isNew]="isNew"  (addEmployeeEvent)="addedEmployee($event)" (updateEmployeeEvent)="updatedEmployee($event)"  (isNewEvent)="isNewChanged($event)" ></app-employee-add>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

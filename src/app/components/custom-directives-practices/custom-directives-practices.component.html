@@ -1,0 +1,41 @@
+<p>custom-directives-practices works!</p>
+<h5> numberonly custom directive used here</h5>
+<input type="text"  numberonly>
+<hr>
+<h5>hightligh custom directive used here in mouse enter and leave </h5>
+<p appHighlight > This mouse enter and mouse leave custom event directive </p>
+<hr>
+<h5> Back Fuction with the Location Object  Custom Directive</h5>
+<button appBackButton> Back</button>
+<hr>
+<h5>Count-Click Custom Directive : </h5>
+<span appCountClick>Click Count </span>
+
+<hr>
+<h5>PasswordStrengthDirective Custom Directive</h5>
+<div class="row">
+  <div class="col-md-4">
+    <input class="form-control" type="password" appPasswordStrength>
+    <div class="strength-bar"></div>
+  </div>
+  <div class="col-md-8">
+
+  </div>
+
+</div>
+Password Strength
+<hr>
+<br>
+
+<h5>myif : Custom Structure Directive</h5>
+<div *myif="true" >
+  This is my custom structure directive whihc shows based on condition
+</div>
+
+<hr>
+<h5>Custom Input Directive </h5>
+ <div mydirective>This value is passed into the directive means component to directive by using the @Input Decorator</div>
+
+<hr>
+<button mydirective>click me </button>
+

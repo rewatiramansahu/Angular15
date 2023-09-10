@@ -1,0 +1,10 @@
+<select [(ngModel)]="selectedCategory">
+  <option value="">Select a category</option>
+  <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+</select>
+
+
+<select [(ngModel)]="selectedProduct" (ngModelChange)="onCategoryChange()" *ngIf="selectedCategory">
+  <option value="">Select a product</option>
+  <option *ngFor="let product of selectedCategory.products" [ngValue]="product">{{ product.name }}</option>
+</select>

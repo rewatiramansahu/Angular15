@@ -1,0 +1,15 @@
+.body{
+    min-height: 400px;
+}
+
+/* div{
+    border:5px dotted green;
+} */
+
+.div1class
+{
+  color:red;
+}
+#div1id{
+  color:green;
+}

@@ -1,0 +1,37 @@
+<p>assignment-custom-pipe works!</p>
+
+Enter the Cardinal number : <input type="text" [(ngModel)]="number">
+<p> Ordinal number :  {{number | ordinal}}</p>
+===============================================================
+<hr>
+<input type="text" [(ngModel)]="searchQuery" placeholder="Search employees" />
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees | nameFilter:searchQuery ">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name | prependTitle:employee.gender }}</td>
+      <td>{{ employee.gender }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+==================================
+
+<form action="">
+  <input type="number" [(ngModel)]="accno" name="accno">
+  <input type="number" [(ngModel)]="accno1" name="accno1">
+</form>
+<button (click)="getAcc()">click me </button>
+
+
+<p> Masked Acc No.   {{ accno | maskAccno}} </p>
+                  <!-- input  | pipename : argument  -->
